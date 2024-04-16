@@ -11,16 +11,18 @@ import dbSample.entitiy.Country;
 import dbSample.util.DatabaseManager;
 
 public class CountryDAO {
-
+    
+    // データベース接続と結果取得のための変数
     private PreparedStatement pstmt;
     private ResultSet rs;
     
     public List<Country> getCountryFromName(String name){
       
+        // メソッドの結果として返すリスト
         List<Country> results = new ArrayList<>();
         
         try {
-            
+            // 1,2. ドライバを読み込み、DBに接続
             Connection con = DatabaseManager.getConnection();
             
 
@@ -38,6 +40,7 @@ public class CountryDAO {
                 Country country = new Country();
                 country.setName(rs.getString("Name"));
                 country.setPopulation(rs.getInt("Population"));
+                
 
                 // リストに追加
                 results.add(country);

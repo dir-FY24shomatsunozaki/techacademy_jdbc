@@ -5,15 +5,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import javax.xml.crypto.dsig.keyinfo.KeyInfo;
-
 import dbSample.dao.CountryDAO;
 import dbSample.entitiy.Country;
+
 
 public class DBConnectSample06 {
 
     public static void main(String[] args) {
         
+        // Countryクラスにアクセスするため、CountryDAOをインスタンス化
         CountryDAO dao = new CountryDAO();
         
         System.out.print("検索キーワードを入力してください > ");
