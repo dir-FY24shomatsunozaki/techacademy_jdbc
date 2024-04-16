@@ -17,7 +17,8 @@ public class DBConnectSample06 {
         CountryDAO dao = new CountryDAO();
         
         System.out.print("検索キーワードを入力してください > ");
-        String name = keyIn();        
+        String name = keyIn();  
+        
         List<Country> list = dao.getCountryFromName(name);
 
         // 取得したListオブジェクトを順番に取り出し、出力
